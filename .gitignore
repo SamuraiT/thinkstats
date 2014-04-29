@@ -1,0 +1,9 @@
+*.pyc
+.DS_Store
+*.o
+*.db
+*.swp
+ans
+*.dat
+reference
+*.pdf
