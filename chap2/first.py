@@ -50,6 +50,21 @@ def preg_length_list():
             others.append(preg.prglength)
     return first,others
 
+def all_of_preg_length_list():
+    first = []
+    others = []
+    all = []
+    for preg in table.records:
+        if preg.birthord == 1:
+            first.append(preg.prglength)
+        elif isinstance(preg.birthord, int):
+            others.append(preg.prglength)
+
+        if isinstance(preg.birthord, int):
+            all.append(preg.prglength)
+    return first,others, all
+
+
 def standVar(first,others):
     import thinkstats as stats
     import math
