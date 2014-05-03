@@ -4,7 +4,6 @@ import __future__
 table = survey.Pregnancies()
 data_dir = '../chap1/'
 table.ReadRecords(data_dir)
-print('number of pregnancies: ', len(table.records))
 
 #ex2
 def number_of_pregnancies():
