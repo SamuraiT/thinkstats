@@ -64,6 +64,11 @@ def all_of_preg_length_list():
             all.append(preg.prglength)
     return first,others, all
 
+def preg_pmf():
+    import Pmf
+    return [Pmf.MakePmfFromList(preglen) 
+            for preglen in all_of_preg_length_list()]
+
 
 def standVar(first,others):
     import thinkstats as stats
