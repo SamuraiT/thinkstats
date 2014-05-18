@@ -75,7 +75,21 @@ def main():
     myplot.Show(title='PMF of running speed',
                xlabel='speed (mph)',
                ylabel='probability')
+    import Cdf
+    
+    cdf = Cdf.MakeCdfFromList(speeds,'speeds')
+    myplot.Cdf(cdf)
+    myplot.Show()
+    
+    myplot.Cdfs(cdf)
+    myplot.Show()
+    
 
+    
+def cdft():
+    import Cdf
+    
+    cdf = Cdf.MakeCdfFromList()
 
 if __name__ == '__main__':
     main()
