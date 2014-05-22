@@ -20,7 +20,7 @@ def Sample(cdf, n):
 def weight_cdf(preg):
     weight = []
     for record in preg.records:
-        wgt = record.birthwgt_oz
+        wgt = record.totalwgt_oz
         if wgt == 'NA':continue
         weight.append(wgt)
     cdf = Cdf.MakeCdfFromList(weight)
@@ -39,7 +39,6 @@ def main():
     myplot.Cdf(cdf_sample)
     myplot.Show()
 
- 
 if __name__ == '__main__':
     main()
 
