@@ -13,7 +13,9 @@ import myplot
 def paretovariate(alpha, xm=1, n=1000):
     pareto = random.paretovariate
     y = lambda alpha,xm:((1.0/xm)**alpha)*pareto(alpha)+(1-(1.0/xm))
-    return [y(alpha,xm) for i in xrange(n)]
+    #return [y(alpha,xm) for i in xrange(n)]
+    return [xm*pareto(alpha) for i in xrange(n)]
+
 
 def ccdf_list(cdf):
     return [1-p for x,p in cdf.Items()]
